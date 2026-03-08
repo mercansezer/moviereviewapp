@@ -1,0 +1,14 @@
+# Güvenlik: Hassas veriler
+**/.env
+.env
+backend/.env
+frontend/.env
+
+# Bağımlılıklar
+**/node_modules/
+node_modules/
+
+# Gereksiz dosyalar
+.DS_Store
+dist/
+build/

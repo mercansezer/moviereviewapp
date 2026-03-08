@@ -1,0 +1,34 @@
+
+✅ Başarılı Yanıtlar (2xx)
+| Kod | Adı        | Ne Zaman Kullanılır?                                                          |
+| --- | ---------- | ----------------------------------------------------------------------------- |
+| 200 | OK         | Başarılı GET, PUT, DELETE isteklerinde.                                       |
+| 201 | Created    | Yeni bir kaynak başarıyla oluşturulduysa (POST ile).                          |
+| 204 | No Content | Yanıt gövdesi olmadan başarıyla tamamlanan istekler (genelde DELETE sonrası). |
+
+
+🚫 İstemci Hataları (4xx)
+| Kod | Adı                  | Ne Zaman Kullanılır?                                                      |
+| --- | -------------------- | ------------------------------------------------------------------------- |
+| 400 | Bad Request          | İstek eksik, hatalı veya geçersiz veri içeriyorsa.                        |
+| 401 | Unauthorized         | Kimlik doğrulama yapılmamışsa (token, login vs).                          |
+| 403 | Forbidden            | Giriş yapılmış olsa da, bu kaynağa erişim yetkisi yoksa.                  |
+| 404 | Not Found            | Kaynak bulunamadığında (örneğin: yanlış endpoint).                        |
+| 409 | Conflict             | Veri çakışması varsa (örneğin: aynı e-mail ile kayıt olmaya çalışmak).    |
+| 422 | Unprocessable Entity | Geçerli formatta ama işlenemeyen veri varsa (örneğin: validation hatası). |
+
+
+
+🔥 Sunucu Hataları (5xx)
+| Kod | Adı                   | Ne Zaman Kullanılır?                                          |
+| --- | --------------------- | ------------------------------------------------------------- |
+| 500 | Internal Server Error | Sunucu tarafında beklenmeyen bir hata olursa.                 |
+| 502 | Bad Gateway           | Sunucu, başka bir sunucudan kötü yanıt alırsa (proxy durumu). |
+| 503 | Service Unavailable   | Sunucu geçici olarak hizmet veremiyorsa (bakım zamanı gibi).  |
+
+
+
+//Email verification with mailtrap
+//Email verification with mailtrap
+//Email verification with mailtrap
+Sandbox ortamında test amaçlı kullanılır, proje canlıya alırken başka toolslar kullanılır. Mailtrap gerçek mail adresine mail gönderme yapmaz. Mailtrap sitesine gidip oradan node.js kullanacağımız için node.js kodlarını alır kullanırız. nodemailer diye bir library kullanır onu da indirmemiz gerekir.
