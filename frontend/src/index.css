@@ -1,0 +1,78 @@
+@import "tailwindcss";
+ {
+  /* To activate dark mode, I took it from google. I wrote how to activate dark mode in tailwind 4*/
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+.gelatine {
+  animation: gelatine 0.5s;
+}
+@keyframes gelatine {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+.animation-scale {
+  transform-origin: top;
+  animation: scale 0.2s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes scale-reverse {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.animation-scale-reverse {
+  transform-origin: top;
+  animation: scale-reverse 0.2s forwards;
+}
+
+.custom-scroll-bar::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+}
+
+/* Track */
+.custom-scroll-bar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.custom-scroll-bar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@theme {
+  --color-primary: #171717;
+  --color-secondary: #272727;
+  --color-dark-subtle: rgba(255, 255, 255, 0.5);
+  --color-light-subtle: rgba(39, 39, 39, 0.5);
+}
